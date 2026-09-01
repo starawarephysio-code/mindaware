@@ -1,0 +1,90 @@
+import "./globals.css";
+
+export const metadata = {
+  title: "心見 MIND-AWARE｜顱薦椎 × 內臟筋膜 | 台北大安 · 到府服務",
+  description:
+    "心見 MIND-AWARE，台北頂尖顱薦椎（Craniosacral Therapy）與內臟筋膜放鬆工作室。空間體驗 2,000 元 / 60 分鐘；到府服務 2,500 元 / 60 分鐘，台北市、新北市全區。Upledger 系統，10 年專業。",
+  keywords: ["顱薦椎", "Craniosacral Therapy", "內臟筋膜", "台北顱薦椎", "到府顱薦椎", "心見", "MIND-AWARE", "大安顱薦椎"],
+  openGraph: {
+    title: "心見 MIND-AWARE｜顱薦椎 × 內臟筋膜 台北",
+    description: "台北顱薦椎與內臟筋膜工作室。空間體驗 2,000元；到府服務 2,500元，台北市、新北市全區。",
+    type: "website",
+    url: "https://www.mindaware.tw",
+    locale: "zh_TW",
+    siteName: "心見 MIND-AWARE",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "心見 MIND-AWARE｜顱薦椎 × 內臟筋膜 台北",
+    description: "台北顱薦椎工作室。據點 2,000元；到府 2,500元 / 60 分鐘。",
+  },
+  alternates: {
+    canonical: "https://www.mindaware.tw",
+  },
+  robots: { index: true, follow: true },
+};
+
+export default function RootLayout({ children }) {
+  const schema = [
+    {
+      "@context": "https://schema.org",
+      "@type": ["HealthAndBeautyBusiness", "LocalBusiness"],
+      name: "心見 MIND-AWARE",
+      alternateName: "Mind-Aware Craniosacral Therapy",
+      description: "台北頂尖顱薦椎（Craniosacral Therapy）與內臟筋膜放鬆工作室",
+      url: "https://www.mindaware.tw",
+      email: "starawarephysio@gmail.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "和平東路二段100號3樓之8",
+        addressLocality: "大安區",
+        addressRegion: "台北市",
+        postalCode: "10681",
+        addressCountry: "TW",
+      },
+      areaServed: [
+        { "@type": "City", name: "台北市" },
+        { "@type": "City", name: "新北市" },
+      ],
+      priceRange: "$$",
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "心見服務項目",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            name: "顱薦椎 × 內臟筋膜 據點體驗",
+            price: "2000",
+            priceCurrency: "TWD",
+            description: "心見大安或北投老爺酒店，全程一對一 60 分鐘",
+          },
+          {
+            "@type": "Offer",
+            name: "顱薦椎 × 內臟筋膜 到府服務",
+            price: "2500",
+            priceCurrency: "TWD",
+            description: "台北市、新北市全區到府，全程一對一 60 分鐘",
+          },
+        ],
+      },
+    },
+  ];
+
+  return (
+    <html lang="zh-TW">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+TC:wght@300;400;500;600&display=swap"
+          rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      </head>
+      <body style={{ fontFamily: "var(--font-body)" }}>{children}</body>
+    </html>
+  );
+}
