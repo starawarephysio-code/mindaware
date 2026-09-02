@@ -22,7 +22,6 @@ export default function Hero() {
                 身體並非零散的部件，而是一個流動的整體（Holism）。在「心見」，我們以顱薦椎（Craniosacral）的微幅律動為起點，溫柔地梳理內臟筋膜（Visceral Fascia）、淋巴與神經間的緊繃張力。
               </p>
             </div>
-
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a href={LINE_URL} target="_blank" rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 rounded-full bg-[hsl(138,23%,39%)] px-7 py-3.5 text-sm font-medium tracking-wider text-white transition-all duration-300 hover:opacity-90 hover:shadow-lg">
@@ -34,7 +33,6 @@ export default function Hero() {
                 了解心見
               </Link>
             </div>
-
             <div className="mt-12 flex flex-wrap items-center gap-8">
               <div className="inline-flex items-center gap-3">
                 <span className="font-heading text-3xl md:text-4xl font-light text-[hsl(138,23%,39%)]">10</span>
@@ -51,7 +49,13 @@ export default function Hero() {
           <div className="lg:col-span-6 order-1 lg:order-2">
             <div className="relative">
               <div className="aspect-[3/4] sm:aspect-[4/5] w-full overflow-hidden rounded-sm bg-[hsl(36,31%,91%)]">
-                <img src={HERO_IMG} alt="靜謐的侘寂意象" className="w-full h-full object-cover" />
+                <img
+                  src={HERO_IMG}
+                  alt="心見 MIND-AWARE 台北顱薦椎工作室｜靜謐的療癒空間，提供顱薦椎工作與內臟筋膜放鬆服務"
+                  width={600}
+                  height={750}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="absolute -bottom-4 -left-4 hidden sm:block">
                 <div className="bg-[hsl(38,33%,96%)]/90 backdrop-blur px-5 py-4 rounded-sm shadow-sm border border-[hsl(36,25%,86%)]/50">

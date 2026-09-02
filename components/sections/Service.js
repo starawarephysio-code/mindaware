@@ -24,7 +24,13 @@ export default function Service() {
         {/* Studio */}
         <div className="mt-16 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="aspect-[4/3] overflow-hidden rounded-sm bg-[hsl(36,31%,91%)]">
-            <img src={STUDIO_IMG} alt="心見空間" className="w-full h-full object-cover" />
+            <img
+              src={STUDIO_IMG}
+              alt="心見大安顱薦椎工作室空間｜台北市大安區和平東路，提供一對一顱薦椎與內臟筋膜放鬆工作"
+              width={600}
+              height={450}
+              className="w-full h-full object-cover"
+            />
           </div>
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -83,10 +89,8 @@ export default function Service() {
             </div>
             <p className="mt-6 text-xs text-[hsl(30,12%,42%)] font-light">服務範圍：台北市全區、新北市全區</p>
             <a href={LINE_URL} target="_blank" rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center gap-2 rounded-full border px-6 py-3 text-sm font-medium tracking-wider transition-all duration-300 hover:text-white"
-              style={{ borderColor: A, color: A }}
-              onMouseEnter={e => { e.currentTarget.style.backgroundColor = A; e.currentTarget.style.color = "white"; }}
-              onMouseLeave={e => { e.currentTarget.style.backgroundColor = "transparent"; e.currentTarget.style.color = A; }}>
+              className="mt-8 inline-flex items-center gap-2 rounded-full border px-6 py-3 text-sm font-medium tracking-wider transition-all duration-300"
+              style={{ borderColor: A, color: A }}>
               預約到府體驗
             </a>
           </div>
