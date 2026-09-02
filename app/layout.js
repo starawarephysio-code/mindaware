@@ -6,8 +6,11 @@ export const metadata = {
     template: "%s｜心見 MIND-AWARE",
   },
   description:
-    "心見 MIND-AWARE，台北顱薦椎（Craniosacral Therapy）與內臟筋膜放鬆工作室。空間體驗 2,000 元 / 60 分鐘；到府服務 2,500 元 / 60 分鐘，台北市、新北市全區。Upledger 系統，10 年專業。",
+    "心見 MIND-AWARE，台北顱薦椎（Craniosacral Therapy）與內臟筋膜放鬆工作室。空間體驗 2,000 元 / 60 分鐘；到府服務 2,500 元 / 60 分鐘，台北市、新北市全區。Upledler 系統，10 年專業。",
   keywords: ["顱薦椎", "Craniosacral Therapy", "內臟筋膜", "台北顱薦椎", "到府顱薦椎", "心見", "MIND-AWARE", "大安顱薦椎", "北投顱薦椎", "自費物理治療台北"],
+  verification: {
+    google: "KwMaJ21AiNIzt0Yr1bpIoFHRAcgfBSzpfcYaER-RIzA",
+  },
   openGraph: {
     title: "心見 MIND-AWARE｜顱薦椎 × 內臟筋膜 台北",
     description: "台北顱薦椎與內臟筋膜工作室。空間體驗 2,000元；到府服務 2,500元，台北市、新北市全區。",
@@ -25,15 +28,13 @@ export const metadata = {
   robots: { index: true, follow: true },
 };
 
-// ── Schema.org structured data ─────────────────────────────────────
 const LocalBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["HealthAndBeautyBusiness", "LocalBusiness"],
   "@id": "https://www.mindaware.tw/#organization",
   name: "心見 MIND-AWARE",
   alternateName: "Mind-Aware Craniosacral Therapy",
-  description:
-    "台北頂尖顱薦椎（Craniosacral Therapy）與內臟筋膜放鬆工作室，採用 Upledger 系統，提供深度身心放鬆的一對一陪伴服務。",
+  description: "台北頂尖顱薦椎（Craniosacral Therapy）與內臟筋膜放鬆工作室，採用 Upledger 系統，提供深度身心放鬆的一對一陪伴服務。",
   url: "https://www.mindaware.tw",
   email: "starawarephysio@gmail.com",
   address: {
