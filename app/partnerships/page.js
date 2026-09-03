@@ -3,13 +3,32 @@ import Footer from "@/components/Footer";
 import { PARTNERS } from "@/lib/siteData";
 import { Mail, ArrowUpRight } from "lucide-react";
 
-export const metadata = { title: "單位合作｜心見 MIND-AWARE", description: "心見 MIND-AWARE 與各領域夥伴合作，包含醫院診所、物理治療所、飯店SPA等。" };
+export const metadata = {
+  title: "單位合作｜心見 MIND-AWARE",
+  description: "心見 MIND-AWARE 與各領域夥伴合作，包含醫院診所、物理治療所、飯店SPA等。台北顱薦椎工作室，為企業、醫療院所、飯店提供專業合作方案。",
+  alternates: { canonical: "https://www.mindaware.tw/partnerships" },
+  openGraph: {
+    title: "單位合作｜心見 MIND-AWARE",
+    description: "心見為醫療院所、飯店SPA、月子中心提供顱薦椎工作專業合作。",
+    url: "https://www.mindaware.tw/partnerships",
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "心見 MIND-AWARE", item: "https://www.mindaware.tw" },
+    { "@type": "ListItem", position: 2, name: "單位合作", item: "https://www.mindaware.tw/partnerships" },
+  ],
+};
 
 const LINE_URL = "https://lin.ee/rqKVgA4";
 
 export default function Partnerships() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Navbar />
       <section className="pt-32 md:pt-40 pb-24 md:pb-32 min-h-screen bg-[hsl(38,33%,96%)]">
         <div className="mx-auto max-w-5xl px-6 lg:px-10">
