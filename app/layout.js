@@ -51,29 +51,6 @@ const LocalBusinessSchema = {
     { "@type": "City", name: "新北市" },
   ],
   priceRange: "$$",
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5.0",
-    reviewCount: "12",
-    bestRating: "5",
-    worstRating: "1",
-  },
-  review: [
-    {
-      "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      author: { "@type": "Person", name: "匿名來訪者" },
-      reviewBody: "在心見，我第一次感覺到身體真正鬆下來了。工作者的手非常輕，但每一次觸碰都讓我感覺被看見。",
-      datePublished: "2026-01-15",
-    },
-    {
-      "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      author: { "@type": "Person", name: "S.C." },
-      reviewBody: "長期肩頸緊繃，試過很多方式都只是短暫緩解。第一次做完顱薦椎之後，睡眠明顯改善了。",
-      datePublished: "2026-02-20",
-    },
-  ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "心見服務項目",
