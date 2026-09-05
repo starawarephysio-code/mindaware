@@ -18,10 +18,30 @@ const breadcrumbSchema = {
   ],
 };
 
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://www.mindaware.tw/journal#collection",
+  url: "https://www.mindaware.tw/journal",
+  name: "心見筆記｜顱薦椎 × 內臟筋膜 深度文章",
+  inLanguage: "zh-TW",
+  about: { "@id": "https://www.mindaware.tw/#organization" },
+  mainEntity: {
+    "@type": "ItemList",
+    itemListElement: JOURNAL_POSTS.map((post, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `https://www.mindaware.tw/journal/${post.slug}`,
+      name: post.title,
+    })),
+  },
+};
+
 export default function JournalPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
       <Navbar />
       <section className="pt-32 md:pt-40 pb-24 md:pb-32 min-h-screen bg-[hsl(38,33%,96%)]">
         <div className="mx-auto max-w-4xl px-6 lg:px-10">

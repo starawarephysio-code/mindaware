@@ -24,8 +24,17 @@ export const metadata = {
     title: "心見 MIND-AWARE｜顱薦椎 × 內臟筋膜 台北",
     description: "台北顱薦椎工作室。據點 2,000元；到府 2,500元 / 60 分鐘。",
   },
-  alternates: { canonical: "https://www.mindaware.tw" },
+  alternates: {
+    canonical: "https://www.mindaware.tw",
+    languages: { "zh-TW": "https://www.mindaware.tw" },
+  },
   robots: { index: true, follow: true },
+  other: {
+    "geo.region": "TW-TPE",
+    "geo.placename": "台北市大安區",
+    "geo.position": "25.0263;121.5381",
+    ICBM: "25.0263,121.5381",
+  },
 };
 
 const LocalBusinessSchema = {
