@@ -18,6 +18,9 @@ export const metadata = {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.mindaware.tw/faq" },
+  inLanguage: "zh-TW",
+  about: { "@id": "https://www.mindaware.tw/#organization" },
   mainEntity: FAQ_ITEMS.map((item) => ({
     "@type": "Question",
     name: item.question,
