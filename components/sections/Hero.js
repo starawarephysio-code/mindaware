@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 const LINE_URL = "https://lin.ee/rqKVgA4";
@@ -49,11 +50,14 @@ export default function Hero() {
           <div className="lg:col-span-6 order-1 lg:order-2">
             <div className="relative">
               <div className="aspect-[3/4] sm:aspect-[4/5] w-full overflow-hidden rounded-sm bg-[hsl(36,31%,91%)]">
-                <img
+                <Image
                   src={HERO_IMG}
                   alt="心見 MIND-AWARE 台北顱薦椎工作室｜靜謐的療癒空間，提供顱薦椎工作與內臟筋膜放鬆服務"
                   width={600}
                   height={750}
+                  priority
+                  fetchPriority="high"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="w-full h-full object-cover"
                 />
               </div>

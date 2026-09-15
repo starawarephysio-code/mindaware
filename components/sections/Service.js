@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { MapPin, Home } from "lucide-react";
 
 const LINE_URL = "https://lin.ee/rqKVgA4";
@@ -24,11 +25,13 @@ export default function Service() {
         {/* Studio */}
         <div className="mt-16 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="aspect-[4/3] overflow-hidden rounded-sm bg-[hsl(36,31%,91%)]">
-            <img
+            <Image
               src={STUDIO_IMG}
               alt="心見大安顱薦椎工作室空間｜台北市大安區和平東路，提供一對一顱薦椎與內臟筋膜放鬆工作"
               width={600}
               height={450}
+              loading="lazy"
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="w-full h-full object-cover"
             />
           </div>
