@@ -12,6 +12,7 @@ export const metadata = {
     title: "台北顱薦椎 FAQ｜心見 MIND-AWARE 常見問題",
     description: "顱薦椎費用、流程、適合族群完整解答。台北大安、北投，到府服務台北市、新北市全區。",
     url: "https://www.mindaware.tw/faq",
+    images: [{ url: "https://www.mindaware.tw/og-faq.png", width: 1200, height: 630, alt: "台北顱薦椎 FAQ｜心見 MIND-AWARE 常見問題" }],
   },
 };
 
