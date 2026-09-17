@@ -11,6 +11,7 @@ export const metadata = {
     title: "台北顱薦椎體驗流程｜心見 MIND-AWARE",
     description: "從 LINE 預約到完成回饋，5 個步驟完整解析。",
     url: "https://www.mindaware.tw/experience",
+    images: [{ url: "https://www.mindaware.tw/og-experience.png", width: 1200, height: 630, alt: "台北顱薦椎體驗流程｜心見 MIND-AWARE" }],
   },
 };
 

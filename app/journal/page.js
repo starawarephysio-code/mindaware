@@ -7,6 +7,12 @@ export const metadata = {
   title: "心見筆記｜顱薦椎 × 內臟筋膜 深度文章",
   description: "心見 MIND-AWARE 關於顱薦椎工作、內臟筋膜放鬆的深度文章。費用指南、適合族群、孕期應用——台灣最完整的顱薦椎知識庫。",
   alternates: { canonical: "https://www.mindaware.tw/journal" },
+  openGraph: {
+    title: "心見筆記｜顱薦椎 × 內臟筋膜 深度文章",
+    description: "從費用指南到孕期應用，台灣最完整的顱薦椎工作知識庫。",
+    url: "https://www.mindaware.tw/journal",
+    images: [{ url: "https://www.mindaware.tw/og-journal.png", width: 1200, height: 630, alt: "心見筆記｜顱薦椎 × 內臟筋膜 深度文章" }],
+  },
 };
 
 const breadcrumbSchema = {

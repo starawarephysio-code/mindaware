@@ -18,11 +18,13 @@ export const metadata = {
     url: "https://www.mindaware.tw",
     locale: "zh_TW",
     siteName: "心見 MIND-AWARE",
+    images: [{ url: "https://www.mindaware.tw/og-image.png", width: 1200, height: 630, alt: "心見 MIND-AWARE｜顱薦椎 × 內臟筋膜 台北" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "心見 MIND-AWARE｜顱薦椎 × 內臟筋膜 台北",
     description: "台北顱薦椎工作室。據點 2,000元；到府 2,500元 / 60 分鐘。",
+    images: ["https://www.mindaware.tw/og-image.png"],
   },
   alternates: {
     canonical: "https://www.mindaware.tw",
