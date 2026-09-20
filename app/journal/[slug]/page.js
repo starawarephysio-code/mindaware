@@ -12,6 +12,10 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const post = JOURNAL_POSTS.find((p) => p.slug === slug);
   if (!post) return {};
+  const ogImage =
+    post.slug === "visceral-fascia-release-what-is-it"
+      ? "https://www.mindaware.tw/og-visceral-fascia.png"
+      : "https://www.mindaware.tw/og-journal.png";
   return {
     title: post.title,
     description: post.description,
@@ -25,6 +29,13 @@ export async function generateMetadata({ params }) {
       type: "article",
       publishedTime: post.date,
       url: `https://www.mindaware.tw/journal/${post.slug}`,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: post.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      images: [ogImage],
     },
   };
 }
@@ -65,8 +76,12 @@ function renderContent(content) {
     } else if (line.trim() === "") {
       html += "";
     } else {
-      // Inline bold
-      const processed = line.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+      // Inline bold + autolink bare URLs
+      let processed = line.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+      processed = processed.replace(
+        /(^|[\s（(])(https?:\/\/[^\s）)]+)/g,
+        '$1<a href="$2" target="_blank" rel="noopener noreferrer">$2</a>'
+      );
       html += `<p>${processed}</p>`;
     }
   }
@@ -123,12 +138,29 @@ export default async function JournalPostPage({ params }) {
     ],
   };
 
+  // FAQ schema only when the post carries visible faqs (schema count == visible count)
+  const faqSchema = post.faqs?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": `https://www.mindaware.tw/journal/${post.slug}#faq`,
+        mainEntity: post.faqs.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      }
+    : null;
+
   const htmlContent = renderContent(post.content);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {faqSchema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      )}
       <Navbar />
       <article className="pt-32 md:pt-40 pb-24 md:pb-32 bg-[hsl(38,33%,96%)]">
         <div className="mx-auto max-w-3xl px-6 lg:px-10">
@@ -170,6 +202,29 @@ export default async function JournalPostPage({ params }) {
               "--table-border": "hsl(36,25%,86%)",
             }}
           />
+
+          {/* Visible FAQ — mirrors post.faqs 1:1 (schema count == visible count) */}
+          {post.faqs?.length > 0 && (
+            <section className="mt-16">
+              <h2 className="heading-serif text-xl md:text-2xl text-[hsl(30,18%,15%)] mb-2">
+                內臟筋膜放鬆常見問題
+              </h2>
+              <p className="text-xs tracking-[0.2em] text-[hsl(30,12%,42%)] mb-8">FAQ</p>
+              <div className="divide-y divide-[hsl(36,25%,86%)] border-y border-[hsl(36,25%,86%)]">
+                {post.faqs.map((f) => (
+                  <details key={f.q} className="group py-5 cursor-pointer">
+                    <summary className="flex justify-between items-start gap-4 text-[hsl(30,18%,15%)] font-medium list-none text-base leading-relaxed">
+                      {f.q}
+                      <span className="text-[hsl(30,12%,42%)] flex-shrink-0 text-xl leading-none mt-0.5 group-open:rotate-45 transition-transform duration-300">+</span>
+                    </summary>
+                    <p className="mt-3 text-sm text-[hsl(30,12%,38%)] font-light leading-relaxed">
+                      {f.a}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* CTA */}
           <div className="mt-16 p-8 bg-[hsl(36,31%,93%)] rounded-sm border border-[hsl(36,25%,86%)]">
