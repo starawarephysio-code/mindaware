@@ -26,12 +26,12 @@ export default function Hero() {
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a href={LINE_URL} target="_blank" rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 rounded-full bg-[hsl(138,23%,39%)] px-7 py-3.5 text-sm font-medium tracking-wider text-white transition-all duration-300 hover:opacity-90 hover:shadow-lg">
-                開始探索身體
+                LINE 預約體驗
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
-              <Link href="/#philosophy"
+              <Link href="/#pricing"
                 className="inline-flex items-center gap-2 text-sm font-light tracking-wider text-[hsl(30,18%,15%)] hover:text-[hsl(138,23%,39%)] transition-colors duration-300 border-b border-[hsl(30,18%,15%)]/30 hover:border-[hsl(138,23%,39%)] pb-0.5">
-                了解心見
+                看費用與方式
               </Link>
             </div>
             <div className="mt-12 flex flex-wrap items-center gap-8">
@@ -64,7 +64,7 @@ export default function Hero() {
               <div className="absolute -bottom-4 -left-4 hidden sm:block">
                 <div className="bg-[hsl(38,33%,96%)]/90 backdrop-blur px-5 py-4 rounded-sm shadow-sm border border-[hsl(36,25%,86%)]/50">
                   <p className="font-heading text-sm tracking-wider text-[hsl(30,18%,15%)]">Craniosacral Therapy</p>
-                  <p className="text-[11px] tracking-[0.3em] text-[hsl(30,12%,38%)] mt-1">顱薦椎工作</p>
+                  <p className="text-xs tracking-[0.3em] text-[hsl(30,12%,38%)] mt-1">顱薦椎工作</p>
                 </div>
               </div>
             </div>

@@ -3,7 +3,7 @@ export default function Voices() {
     <section id="voices" className="py-24 md:py-36 bg-[hsl(38,33%,96%)]">
       <div className="mx-auto max-w-6xl px-6 lg:px-10">
         <div className="text-center mb-16">
-          <p className="text-[12px] tracking-[0.2em] text-[hsl(28,24%,44%)] font-medium">06 · VOICES</p>
+          <p className="text-xs tracking-[0.2em] text-[hsl(28,24%,44%)] font-medium">06 · VOICES</p>
           <h2 className="mt-5 heading-serif text-[36px] text-[hsl(30,18%,15%)] font-light">心見回饋</h2>
           <p className="mt-4 text-base text-[hsl(30,12%,38%)] font-light">每一段停留，都留下了不同的痕跡。</p>
         </div>
