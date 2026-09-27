@@ -1,7 +1,6 @@
 import Hero from "@/components/sections/Hero";
 import Philosophy from "@/components/sections/Philosophy";
 import Method from "@/components/sections/Method";
-import Service from "@/components/sections/Service";
 import Pricing from "@/components/sections/Pricing";
 import FaqPreview from "@/components/sections/FaqPreview";
 import Origins from "@/components/sections/Origins";
@@ -67,7 +66,6 @@ export default function Home() {
         <Hero />
         <Philosophy />
         <Method />
-        <Service />
         <Pricing />
         <FaqPreview />
         <Origins />

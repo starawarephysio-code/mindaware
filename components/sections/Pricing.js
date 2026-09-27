@@ -1,20 +1,34 @@
+import Image from "next/image";
 import { MapPin, Home, Check, ArrowUpRight } from "lucide-react";
 import { PRICE_PLANS, COMPARISON_TABLE } from "@/lib/priceData";
 
 const LINE_URL = "https://lin.ee/rqKVgA4";
 const P = "hsl(138,23%,39%)";
 const A = "hsl(28,24%,44%)";
+const STUDIO_IMG = "https://media.base44.com/images/public/6a6c994a5052168c0a1481ca/754073548_generated_f9b5e3c4.png";
 
 export default function Pricing() {
   return (
     <section id="pricing" className="py-24 md:py-36 bg-[hsl(38,33%,96%)]">
       <div className="mx-auto max-w-6xl px-6 lg:px-10">
         <div className="flex items-center gap-4 mb-10">
-          <span className="section-label">03 · 費用說明</span>
+          <span className="section-label">03 · SERVICE & PRICING</span>
           <span className="h-px flex-1 bg-[hsl(36,25%,86%)]" />
         </div>
         <h2 className="heading-serif text-2xl md:text-4xl leading-relaxed text-[hsl(30,18%,15%)] max-w-2xl">透明收費，無隱藏費用</h2>
         <p className="mt-4 font-heading text-base md:text-lg font-light text-[hsl(30,12%,38%)] tracking-wide max-w-2xl">選擇最適合你的方式，與身體相遇。全程一對一，固定 60 分鐘，自費服務。</p>
+
+        <div className="mt-12 mx-auto max-w-4xl aspect-[16/7] overflow-hidden rounded-sm bg-[hsl(36,31%,91%)]">
+          <Image
+            src={STUDIO_IMG}
+            alt="心見大安顱薦椎工作室空間｜台北市大安區和平東路，提供一對一顱薦椎與內臟筋膜放鬆工作"
+            width={896}
+            height={392}
+            loading="lazy"
+            sizes="(max-width: 896px) 100vw, 896px"
+            className="w-full h-full object-cover"
+          />
+        </div>
 
         <div className="mt-16 grid md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl">
           {PRICE_PLANS.map((plan) => {
@@ -23,7 +37,7 @@ export default function Pricing() {
             return (
               <div key={plan.id} className={`relative rounded-sm border p-8 md:p-10 flex flex-col ${plan.featured ? "shadow-lg" : ""}`}
                 style={{ borderColor: plan.featured ? `${A}80` : "hsl(36,25%,86%)", backgroundColor: plan.featured ? "hsl(36,31%,93%)" : "hsl(38,33%,96%)" }}>
-                {plan.featured && <span className="absolute top-4 right-4 text-[10px] tracking-[0.3em] font-medium" style={{ color: A }}>RECOMMENDED</span>}
+                {plan.featured && <span className="absolute top-4 right-4 text-xs tracking-[0.3em] font-medium" style={{ color: A }}>RECOMMENDED</span>}
                 <div className="flex items-center gap-3 mb-2">
                   {isAccent ? <Home className="w-5 h-5" style={{ color }} /> : <MapPin className="w-5 h-5" style={{ color }} />}
                   <span className="font-heading text-xs tracking-[0.3em]" style={{ color }}>{plan.label}</span>
@@ -52,6 +66,18 @@ export default function Pricing() {
                         {loc.note && <p className="text-xs text-[hsl(30,12%,42%)] font-light mt-0.5">{loc.note}</p>}
                       </div>
                     ))}
+                  </div>
+                )}
+                {plan.prepNotes && (
+                  <div className="mt-6">
+                    <p className="font-heading text-sm font-medium text-[hsl(30,18%,15%)] mb-3 tracking-wide">到府準備事項</p>
+                    <ul className="space-y-2">
+                      {plan.prepNotes.map((item) => (
+                        <li key={item} className="flex gap-3 text-sm text-[hsl(30,12%,38%)] font-light">
+                          <span className="mt-1.5" style={{ color }}>·</span>{item}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 )}
                 {plan.idealFor && (
