@@ -7,7 +7,7 @@ export default function Contact() {
     <section id="contact" className="py-24 md:py-36 bg-[hsl(38,33%,96%)]">
       <div className="mx-auto max-w-6xl px-6 lg:px-10">
         <div className="flex items-center gap-4 mb-10">
-          <span className="section-label">08 · CONTACT</span>
+          <span className="section-label">07 · CONTACT</span>
           <span className="h-px flex-1 bg-[hsl(36,25%,86%)]" />
         </div>
         <h2 className="heading-serif text-2xl md:text-4xl leading-relaxed text-[hsl(30,18%,15%)] max-w-2xl">與您的身體，預約一次相遇</h2>

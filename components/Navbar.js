@@ -5,15 +5,10 @@ import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
   { label: "心見理念", to: "/#philosophy" },
-  { label: "手法介紹", to: "/#method" },
-  { label: "服務 & 費用", to: "/#pricing" },
+  { label: "服務與費用", to: "/#pricing" },
   { label: "體驗流程", to: "/experience" },
   { label: "常見問題", to: "/faq" },
-  { label: "心見團隊", to: "/#team" },
-  { label: "心見回饋", to: "/#voices" },
-  { label: "單位合作", to: "/partnerships" },
   { label: "心見筆記", to: "/journal" },
-  { label: "聯絡我們", to: "/#contact" },
 ];
 
 const LINE_URL = "https://lin.ee/rqKVgA4";
@@ -35,7 +30,7 @@ export default function Navbar() {
         <div className="flex h-16 md:h-20 items-center justify-between">
           <Link href="/" className="flex items-center gap-2.5">
             <span className="font-heading text-xl md:text-2xl font-medium tracking-[0.15em] text-foreground">心見</span>
-            <span className="hidden sm:inline text-[10px] md:text-[11px] tracking-[0.4em] text-foreground-soft">MIND-AWARE</span>
+            <span className="hidden sm:inline text-xs tracking-[0.4em] text-foreground-soft">MIND-AWARE</span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
@@ -45,7 +40,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="rounded-full bg-[hsl(138,23%,39%)] px-5 py-2.5 text-sm font-medium tracking-wider text-white transition-all duration-300 hover:opacity-90 hover:shadow-lg">
-              預約諮詢
+              LINE 預約
             </a>
           </div>
 
@@ -63,7 +58,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="mt-4 rounded-full bg-[hsl(138,23%,39%)] px-5 py-3 text-center text-sm font-medium tracking-wider text-white">
-            預約諮詢
+            LINE 預約
           </a>
         </div>
       </div>

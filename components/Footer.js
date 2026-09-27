@@ -10,18 +10,30 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3">
               <span className="font-heading text-2xl font-medium tracking-[0.15em] text-white">心見</span>
-              <span className="text-[11px] tracking-[0.4em] text-white/60">MIND-AWARE</span>
+              <span className="text-xs tracking-[0.4em] text-white/60">MIND-AWARE</span>
             </div>
             <p className="mt-4 max-w-sm text-sm font-light leading-relaxed text-white/60">
               顱薦椎工作與內臟筋膜放鬆工作室。在靜謐中，重拾身體的節奏。
             </p>
-            <div className="mt-5 space-y-1.5 text-xs text-white/45 font-light">
+            <div className="mt-5 space-y-1.5 text-[13px] text-white/70 font-light">
               <p>據點體驗：2,000 元 / 60 分鐘</p>
               <p>到府服務：2,500 元 / 60 分鐘（台北市、新北市）</p>
             </div>
           </div>
 
           <div className="flex flex-col gap-3 text-sm font-light">
+            <a href="/#team" className="text-white/70 hover:text-white transition-colors">
+              心見團隊
+            </a>
+            <a href="/#voices" className="text-white/70 hover:text-white transition-colors">
+              心見回饋
+            </a>
+            <a href="/partnerships" className="text-white/70 hover:text-white transition-colors">
+              單位合作
+            </a>
+            <a href="/#contact" className="text-white/70 hover:text-white transition-colors">
+              聯絡我們
+            </a>
             <a href={LINE_URL} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white transition-colors">
               LINE 預約諮詢
             </a>
@@ -29,12 +41,12 @@ export default function Footer() {
               <Mail className="w-4 h-4" />
               starawarephysio@gmail.com
             </a>
-            <p className="text-white/50">台北市大安區和平東路二段100號3樓之8</p>
-            <p className="text-white/50 text-xs mt-1">北投老爺酒店 × 心見：台北市北投區中和街2號</p>
+            <p className="text-white/70">台北市大安區和平東路二段100號3樓之8</p>
+            <p className="text-white/70 text-[13px] mt-1">北投老爺酒店 × 心見：台北市北投區中和街2號</p>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/15 flex flex-col sm:flex-row sm:justify-between gap-3 text-xs text-white/45">
+        <div className="mt-12 pt-8 border-t border-white/15 flex flex-col sm:flex-row sm:justify-between gap-3 text-[13px] text-white/70">
           <p>© 2026 心見 MIND-AWARE · All Rights Reserved</p>
           <div className="flex items-center gap-4">
             <a href="/privacy" className="hover:text-white transition-colors">隱私權政策</a>
