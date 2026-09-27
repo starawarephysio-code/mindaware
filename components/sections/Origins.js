@@ -14,7 +14,7 @@ export default function Origins() {
             <p>1971 年，美國一間手術室。</p>
             <p>Dr. Upledger 正在協助一台頸椎手術，負責固定術野。但有一樣東西，他怎麼樣都按不住——包覆脊髓的硬腦膜，一直在輕輕地動。不是心跳，不是呼吸。是他從來沒見過的節律。</p>
             <p>Dr. Upledger 發現這個節律從頭顱透過硬腦膜，一路傳導到薦骨，並將它命名為顱薦椎系統（Craniosacral System，CST）。筋膜卡住的地方，節律就會改變，甚至消失。這讓整件事從「頭顱和薦骨的工作」，擴展成全身筋膜網絡的工作。</p>
-            <p className="font-heading text-[hsl(30,18%,15%)] text-base md:text-lg font-light italic">從一個按不住的薄膜，到理解全身筋膜的工作方式——花了將近一個世紀。</p>
+            <p className="font-heading text-[hsl(30,18%,15%)] text-base md:text-lg font-light italic">從一個按不住的薄膜，到今天對全身筋膜的理解——是半個世紀的累積。</p>
           </div>
           <div className="lg:col-span-5">
             <p className="font-heading text-xs tracking-[0.3em] text-[hsl(138,23%,39%)] mb-6">一些人帶著這樣的狀態前來</p>

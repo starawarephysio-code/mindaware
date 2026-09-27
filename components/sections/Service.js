@@ -80,7 +80,7 @@ export default function Service() {
               <span className="text-sm text-[hsl(30,12%,38%)] font-light">元 / 60 分鐘</span>
             </div>
             <p className="mt-5 text-sm md:text-[15px] leading-loose text-[hsl(30,12%,38%)] font-light">
-              工作者帶著專業設備來到你的家，在你最放鬆的環境裡，讓身體真正落地。對於有嬰幼兒、行動不便、或高度需要隱私的個案，到府是最理想的選擇。
+              工作者帶著專業設備來到你的家，在你最放鬆的環境裡，讓身體真正落地。對於有嬰幼兒、行動不便、或高度需要隱私的來訪者，到府是最理想的選擇。
             </p>
             <div className="mt-8">
               <p className="font-heading text-sm font-medium text-[hsl(30,18%,15%)] mb-3 tracking-wide">到府準備事項</p>

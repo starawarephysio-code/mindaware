@@ -11,10 +11,9 @@ export default function Team() {
           每一位工作者，都帶著不同的質地與溫度，以共同的信念陪伴您的身體找回平衡。
         </p>
         <div className="mt-20 text-center">
-          <blockquote className="font-heading text-xl md:text-3xl font-light text-[hsl(30,18%,15%)] leading-relaxed">「最棒的工作，就是幫助身體自我調節。」</blockquote>
+          <blockquote className="font-heading text-xl md:text-3xl font-light text-[hsl(30,18%,15%)] leading-relaxed">「我們不替身體做決定，只陪它找回自己的節奏。」</blockquote>
           <div className="mt-6 mx-auto w-12 h-px bg-[hsl(138,23%,39%)]/40" />
-          <p className="mt-6 font-heading text-sm md:text-base font-light italic text-[hsl(30,12%,38%)]">"The best doctor is one who can help Nature cure itself."</p>
-          <p className="mt-2 text-xs tracking-[0.2em] text-[hsl(30,12%,42%)]">— A.T. Still · 骨病學之父</p>
+          <p className="mt-2 text-xs tracking-[0.2em] text-[hsl(30,12%,42%)]">— 心見 MIND-AWARE</p>
         </div>
       </div>
     </section>

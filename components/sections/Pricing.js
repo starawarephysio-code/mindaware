@@ -96,7 +96,6 @@ export default function Pricing() {
                     <td className="py-4 pr-6 font-heading text-xs font-medium text-[hsl(30,12%,42%)] tracking-wider align-top">{row.label}</td>
                     <td className="py-4 px-4 text-[hsl(30,18%,15%)] font-light leading-relaxed align-top">{row.studio}</td>
                     <td className="py-4 px-4 text-[hsl(30,18%,15%)] font-light leading-relaxed align-top">{row.home}</td>
-                    <td className="py-4 px-4 text-[hsl(30,12%,38%)] font-light leading-relaxed align-top">{row.clinic}</td>
                     <td className="py-4 px-4 text-[hsl(30,12%,38%)] font-light leading-relaxed align-top">{row.massage}</td>
                   </tr>
                 ))}

@@ -9,7 +9,7 @@ export default function Method() {
           <span className="h-px flex-1 bg-[hsl(36,25%,86%)]" />
         </div>
         <h2 className="heading-serif text-2xl md:text-4xl leading-relaxed text-[hsl(30,18%,15%)]">
-          顱薦椎工作（Craniosacral Therapy, CST）
+          顱薦椎工作（Craniosacral, CST）
         </h2>
         <p className="mt-4 font-heading text-base md:text-lg font-light text-[hsl(30,12%,38%)] tracking-wide">
           使用創始人美國 Upledger 系統，以最輕柔的方式，與身體深層對話。

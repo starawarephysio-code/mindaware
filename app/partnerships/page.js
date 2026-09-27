@@ -5,11 +5,11 @@ import { Mail, ArrowUpRight } from "lucide-react";
 
 export const metadata = {
   title: "單位合作｜心見 MIND-AWARE",
-  description: "心見 MIND-AWARE 與各領域夥伴合作，包含醫院診所、物理治療所、飯店SPA等。台北顱薦椎工作室，為企業、醫療院所、飯店提供專業合作方案。",
+  description: "心見 MIND-AWARE 與各領域夥伴合作，包含健康促進單位、飯店、月子中心等。台北顱薦椎工作室，為企業、健康產業、飯店提供身心放鬆合作方案。",
   alternates: { canonical: "https://www.mindaware.tw/partnerships" },
   openGraph: {
     title: "單位合作｜心見 MIND-AWARE",
-    description: "心見為醫療院所、飯店SPA、月子中心提供顱薦椎工作專業合作。",
+    description: "心見為健康產業、飯店、月子中心提供顱薦椎工作合作。",
     url: "https://www.mindaware.tw/partnerships",
   },
 };
@@ -38,7 +38,7 @@ export default function Partnerships() {
           </div>
           <h1 className="heading-serif text-2xl md:text-4xl leading-relaxed text-[hsl(30,18%,15%)] max-w-2xl">與各領域夥伴，共同深化陪伴</h1>
           <p className="mt-8 max-w-2xl text-[15px] md:text-base leading-loose text-[hsl(30,12%,38%)] font-light">
-            心見為星見物理治療所針對顱薦椎工作研究發展的一個專項團隊，目前已經有許多單位與我們合作，從醫療院所到健康促進，顱薦椎工作都可以增加合作單位的品牌價值。
+            心見是專注於顱薦椎工作與內臟筋膜放鬆的身心放鬆工作室，目前已經有許多單位與我們合作，從健康促進到旅宿休憩，溫柔的身體工作都可以為合作單位帶來獨特的放鬆體驗。
           </p>
           <div className="mt-16 border-t border-[hsl(36,25%,86%)]">
             {PARTNERS.map((p, i) => (

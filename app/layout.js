@@ -6,14 +6,14 @@ export const metadata = {
     template: "%s｜心見 MIND-AWARE",
   },
   description:
-    "心見 MIND-AWARE，台北顱薦椎（Craniosacral Therapy）與內臟筋膜放鬆工作室。空間體驗 2,000 元 / 60 分鐘；到府服務 2,500 元 / 60 分鐘，台北市、新北市全區。Upledler 系統，10 年專業。",
-  keywords: ["顱薦椎", "Craniosacral Therapy", "內臟筋膜", "台北顱薦椎", "到府顱薦椎", "心見", "MIND-AWARE", "大安顱薦椎", "北投顱薦椎", "自費物理治療台北"],
+    "心見 MIND-AWARE，台北顱薦椎（Craniosacral）與內臟筋膜放鬆工作室。空間體驗 2,000 元 / 60 分鐘；到府服務 2,500 元 / 60 分鐘，台北市、新北市全區。Upledger 系統，一對一陪伴。",
+  keywords: ["顱薦椎", "顱薦椎工作", "內臟筋膜放鬆", "台北顱薦椎", "大安顱薦椎", "北投顱薦椎", "到府顱薦椎", "心見", "MIND-AWARE"],
   verification: {
     google: "KwMaJ21AiNIzt0Yr1bpIoFHRAcgfBSzpfcYaER-RIzA",
   },
   openGraph: {
     title: "心見 MIND-AWARE｜顱薦椎 × 內臟筋膜 台北",
-    description: "台北顱薦椎與內臟筋膜工作室。空間體驗 2,000元；到府服務 2,500元，台北市、新北市全區。",
+    description: "台北顱薦椎（Craniosacral）與內臟筋膜放鬆工作室。空間體驗 2,000元；到府服務 2,500元，台北市、新北市全區。",
     type: "website",
     url: "https://www.mindaware.tw",
     locale: "zh_TW",
@@ -23,7 +23,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "心見 MIND-AWARE｜顱薦椎 × 內臟筋膜 台北",
-    description: "台北顱薦椎工作室。據點 2,000元；到府 2,500元 / 60 分鐘。",
+    description: "台北顱薦椎（Craniosacral）工作室。據點 2,000元；到府 2,500元 / 60 分鐘。",
     images: ["https://www.mindaware.tw/og-image.png"],
   },
   alternates: {
@@ -44,8 +44,8 @@ const LocalBusinessSchema = {
   "@type": ["HealthAndBeautyBusiness", "LocalBusiness"],
   "@id": "https://www.mindaware.tw/#organization",
   name: "心見 MIND-AWARE",
-  alternateName: "Mind-Aware Craniosacral Therapy",
-  description: "台北頂尖顱薦椎（Craniosacral Therapy）與內臟筋膜放鬆工作室，採用 Upledger 系統，提供深度身心放鬆的一對一陪伴服務。",
+  alternateName: "MIND-AWARE Craniosacral Studio",
+  description: "台北顱薦椎工作與內臟筋膜放鬆工作室，採用 Upledger 系統，提供一對一身心放鬆陪伴服務。",
   url: "https://www.mindaware.tw",
   email: "starawarephysio@gmail.com",
   address: {
@@ -87,29 +87,6 @@ const LocalBusinessSchema = {
   sameAs: ["https://lin.ee/rqKVgA4"],
 };
 
-const PersonSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "星見物理治療所 心見團隊",
-  jobTitle: "顱薦椎工作者",
-  worksFor: { "@type": "Organization", name: "心見 MIND-AWARE" },
-  hasCredential: [
-    {
-      "@type": "EducationalOccupationalCredential",
-      name: "Upledger Institute CranioSacral Therapy Level 1 (CST1)",
-      credentialCategory: "Professional Certification",
-      recognizedBy: { "@type": "Organization", name: "Upledger Institute International" },
-    },
-    {
-      "@type": "EducationalOccupationalCredential",
-      name: "Upledger Institute CranioSacral Therapy Level 2 (CST2)",
-      credentialCategory: "Professional Certification",
-      recognizedBy: { "@type": "Organization", name: "Upledger Institute International" },
-    },
-  ],
-  knowsAbout: ["顱薦椎工作", "Craniosacral Therapy", "內臟筋膜放鬆", "Visceral Fascial Release", "筋膜系統", "自律神經調節"],
-};
-
 const WebSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -120,7 +97,7 @@ const WebSiteSchema = {
   publisher: { "@id": "https://www.mindaware.tw/#organization" },
 };
 
-const schemas = [LocalBusinessSchema, PersonSchema, WebSiteSchema];
+const schemas = [LocalBusinessSchema, WebSiteSchema];
 
 export default function RootLayout({ children }) {
   return (

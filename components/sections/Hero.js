@@ -52,7 +52,7 @@ export default function Hero() {
               <div className="aspect-[3/4] sm:aspect-[4/5] w-full overflow-hidden rounded-sm bg-[hsl(36,31%,91%)]">
                 <Image
                   src={HERO_IMG}
-                  alt="心見 MIND-AWARE 台北顱薦椎工作室｜靜謐的療癒空間，提供顱薦椎工作與內臟筋膜放鬆服務"
+                  alt="心見 MIND-AWARE 台北顱薦椎工作室｜靜謐的放鬆空間，提供顱薦椎工作與內臟筋膜放鬆"
                   width={600}
                   height={750}
                   priority
@@ -63,7 +63,7 @@ export default function Hero() {
               </div>
               <div className="absolute -bottom-4 -left-4 hidden sm:block">
                 <div className="bg-[hsl(38,33%,96%)]/90 backdrop-blur px-5 py-4 rounded-sm shadow-sm border border-[hsl(36,25%,86%)]/50">
-                  <p className="font-heading text-sm tracking-wider text-[hsl(30,18%,15%)]">Craniosacral Therapy</p>
+                  <p className="font-heading text-sm tracking-wider text-[hsl(30,18%,15%)]">Craniosacral Work</p>
                   <p className="text-[11px] tracking-[0.3em] text-[hsl(30,12%,38%)] mt-1">顱薦椎工作</p>
                 </div>
               </div>
