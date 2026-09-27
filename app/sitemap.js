@@ -15,5 +15,6 @@ export default function sitemap() {
     { url: "https://www.mindaware.tw/journal", lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     ...journalUrls,
     { url: "https://www.mindaware.tw/partnerships", lastModified: new Date(), changeFrequency: "yearly", priority: 0.5 },
+    { url: "https://www.mindaware.tw/privacy", lastModified: new Date("2026-09-27"), changeFrequency: "yearly", priority: 0.3 },
   ];
 }

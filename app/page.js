@@ -10,6 +10,7 @@ import Voices from "@/components/sections/Voices";
 import Contact from "@/components/sections/Contact";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { FAQ_FEATURED } from "@/lib/faqData";
 
 // 首頁 BreadcrumbList（首頁本身）
 const breadcrumbSchema = {
@@ -18,6 +19,18 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "心見 MIND-AWARE", item: "https://www.mindaware.tw" },
   ],
+};
+
+// 首頁 FAQPage Schema — 取 #faq-preview 顯示的 6 題，文字與畫面逐字一致
+const PREVIEW_FAQS = FAQ_FEATURED.slice(0, 6);
+const faqPreviewSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: PREVIEW_FAQS.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
 };
 
 // ServiceList Schema — 讓 AI 可以直接引用服務清單
@@ -62,6 +75,7 @@ export default function Home() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPreviewSchema) }} />
       <Navbar />
       <main>
         <Hero />

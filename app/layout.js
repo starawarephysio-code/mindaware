@@ -6,7 +6,7 @@ export const metadata = {
     template: "%s｜心見 MIND-AWARE",
   },
   description:
-    "心見 MIND-AWARE，台北顱薦椎（Craniosacral）與內臟筋膜放鬆工作室。空間體驗 2,000 元 / 60 分鐘；到府服務 2,500 元 / 60 分鐘，台北市、新北市全區。Upledger 系統，一對一陪伴。",
+    "心見 MIND-AWARE，台北顱薦椎（Craniosacral）與內臟筋膜放鬆工作室，採用 Upledger 系統。大安、北投據點 2,000 元 / 60 分鐘；台北市、新北市到府 2,500 元 / 60 分鐘。全程穿衣、一對一。",
   keywords: ["顱薦椎", "顱薦椎工作", "內臟筋膜放鬆", "台北顱薦椎", "大安顱薦椎", "北投顱薦椎", "到府顱薦椎", "心見", "MIND-AWARE"],
   verification: {
     google: "KwMaJ21AiNIzt0Yr1bpIoFHRAcgfBSzpfcYaER-RIzA",

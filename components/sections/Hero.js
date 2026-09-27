@@ -11,8 +11,8 @@ export default function Hero() {
       <div className="mx-auto max-w-6xl px-6 lg:px-10">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           <div className="lg:col-span-6 order-2 lg:order-1">
-            <p className="section-label mb-6">心見 · MIND-AWARE</p>
             <h1 className="heading-serif text-3xl sm:text-4xl md:text-5xl leading-[1.4] text-[hsl(30,18%,15%)]">
+              <span className="section-label block mb-4 text-xs tracking-[0.3em]">台北顱薦椎 × 內臟筋膜放鬆｜大安 · 北投 · 到府</span>
               在靜謐中，<br />重拾身體的節奏
             </h1>
             <p className="mt-6 font-heading text-lg md:text-xl font-light text-[hsl(30,12%,38%)] tracking-wide">

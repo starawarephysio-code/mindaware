@@ -36,7 +36,10 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/15 flex flex-col sm:flex-row sm:justify-between gap-3 text-xs text-white/45">
           <p>© 2026 心見 MIND-AWARE · All Rights Reserved</p>
-          <p className="tracking-wider">starawarephysio@gmail.com</p>
+          <div className="flex items-center gap-4">
+            <a href="/privacy" className="hover:text-white transition-colors">隱私權政策</a>
+            <p className="tracking-wider">starawarephysio@gmail.com</p>
+          </div>
         </div>
       </div>
     </footer>
