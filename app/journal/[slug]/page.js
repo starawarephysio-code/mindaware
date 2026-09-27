@@ -125,7 +125,7 @@ export default async function JournalPostPage({ params }) {
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": `https://www.mindaware.tw/journal/${post.slug}` },
     inLanguage: "zh-TW",
-    about: ["顱薦椎工作", "Craniosacral Therapy", "內臟筋膜放鬆", "台北"],
+    about: ["顱薦椎工作", "Craniosacral", "內臟筋膜放鬆", "台北"],
   };
 
   const breadcrumbSchema = {

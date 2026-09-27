@@ -5,7 +5,7 @@ import { Mail, ArrowUpRight } from "lucide-react";
 
 export const metadata = {
   title: "單位合作｜心見 MIND-AWARE",
-  description: "心見 MIND-AWARE 與各領域夥伴合作，包含健康促進單位、飯店、月子中心等。台北顱薦椎工作室，為企業、健康產業、飯店提供身心放鬆合作方案。",
+  description: "心見 MIND-AWARE 與企業、飯店及各領域夥伴合作，提供台北顱薦椎與內臟筋膜放鬆的身心陪伴服務。",
   alternates: { canonical: "https://www.mindaware.tw/partnerships" },
   openGraph: {
     title: "單位合作｜心見 MIND-AWARE",
