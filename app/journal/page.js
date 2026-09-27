@@ -5,11 +5,11 @@ import { JOURNAL_POSTS } from "@/lib/journalData";
 
 export const metadata = {
   title: "心見筆記｜顱薦椎 × 內臟筋膜 深度文章",
-  description: "心見 MIND-AWARE 關於顱薦椎工作、內臟筋膜放鬆的深度文章。費用指南、適合族群、孕期應用——台灣最完整的顱薦椎知識庫。",
+  description: "心見 MIND-AWARE 關於顱薦椎工作、內臟筋膜放鬆的深度文章。費用指南、適合族群、孕期應用——心見整理的顱薦椎工作知識庫。",
   alternates: { canonical: "https://www.mindaware.tw/journal" },
   openGraph: {
     title: "心見筆記｜顱薦椎 × 內臟筋膜 深度文章",
-    description: "從費用指南到孕期應用，台灣最完整的顱薦椎工作知識庫。",
+    description: "從費用指南到孕期應用，心見整理的顱薦椎工作知識庫。",
     url: "https://www.mindaware.tw/journal",
     images: [{ url: "https://www.mindaware.tw/og-journal.png", width: 1200, height: 630, alt: "心見筆記｜顱薦椎 × 內臟筋膜 深度文章" }],
   },
@@ -67,7 +67,7 @@ export default function JournalPage() {
             顱薦椎 × 內臟筋膜<br />深度知識文章
           </h1>
           <p className="mt-4 font-heading text-base md:text-lg font-light text-[hsl(30,12%,38%)] tracking-wide">
-            從費用指南到孕期應用，心見整理台灣最完整的顱薦椎工作知識庫。
+            從費用指南到孕期應用，心見整理的顱薦椎工作知識庫。
           </p>
 
           <div className="mt-16 space-y-0 border-t border-[hsl(36,25%,86%)]">
