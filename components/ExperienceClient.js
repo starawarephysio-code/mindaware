@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   MessageCircle,
@@ -236,6 +237,26 @@ export default function ExperienceClient() {
             marginTop: "48px",
           }}
         />
+
+        <div
+          style={{
+            position: "relative",
+            width: "100%",
+            aspectRatio: "16 / 7",
+            overflow: "hidden",
+            borderRadius: "2px",
+            marginTop: "48px",
+          }}
+        >
+          <Image
+            src="/space-3.jpg"
+            alt="心見 MIND-AWARE 工作室實景｜安靜的體驗空間"
+            fill
+            loading="lazy"
+            sizes="(max-width: 1024px) 100vw, 1024px"
+            style={{ objectFit: "cover" }}
+          />
+        </div>
       </section>
 
       {/* ── Step Flow ────────────────────────────────── */}
