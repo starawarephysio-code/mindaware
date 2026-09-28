@@ -54,7 +54,7 @@ const howToSchema = {
       "@type": "HowToStep",
       position: 4,
       name: "靜置整合",
-      text: "工作結束後靜置幾分鐘，讓神經系統從深度放鬆的狀態慢慢回到日常節奏。",
+      text: "工作結束後靜置幾分鐘，讓身體從放鬆的狀態慢慢回到日常節奏。",
     },
     {
       "@type": "HowToStep",
