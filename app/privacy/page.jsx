@@ -17,7 +17,7 @@ const SECTIONS = [
   {
     no: "一",
     title: "蒐集者",
-    body: "【營運主體名稱】（心見 MIND-AWARE）。",
+    body: "欣見健康管理顧問有限公司（統一編號 85012864），品牌名稱：心見 MIND-AWARE。",
   },
   {
     no: "二",
@@ -79,7 +79,10 @@ export default function PrivacyPage() {
           </p>
           <div className="mt-12 space-y-8">
             {SECTIONS.map((s) => (
-              <div key={s.no} className="border-t border-[hsl(36,25%,86%)] pt-6">
+              <div
+                key={s.no}
+                className="border-t border-[hsl(36,25%,86%)] pt-6"
+              >
                 <h2 className="font-heading text-lg font-medium text-[hsl(30,18%,15%)] tracking-wide">
                   {s.no}、{s.title}
                 </h2>
