@@ -5,8 +5,7 @@ import { PRICE_PLANS, COMPARISON_TABLE } from "@/lib/priceData";
 const LINE_URL = "https://lin.ee/rqKVgA4";
 const P = "hsl(138,23%,39%)";
 const A = "hsl(28,24%,44%)";
-const STUDIO_IMG =
-  "https://media.base44.com/images/public/6a6c994a5052168c0a1481ca/754073548_generated_f9b5e3c4.png";
+const STUDIO_IMG = "/space-2.jpg";
 
 const HOME_PREP = [
   "提供約 2×2 公尺的平坦空地",
@@ -33,7 +32,7 @@ export default function Pricing() {
         <div className="mt-12 mx-auto max-w-4xl aspect-[16/7] overflow-hidden rounded-sm bg-[hsl(36,31%,91%)]">
           <Image
             src={STUDIO_IMG}
-            alt="心見大安顱薦椎工作室空間｜台北市大安區和平東路，提供一對一顱薦椎與內臟筋膜放鬆工作"
+            alt="心見 MIND-AWARE 大安工作室實景｜台北市大安區和平東路，提供一對一顱薦椎與內臟筋膜放鬆工作"
             width={896}
             height={392}
             loading="lazy"

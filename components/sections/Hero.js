@@ -3,8 +3,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 const LINE_URL = "https://lin.ee/rqKVgA4";
-const HERO_IMG =
-  "https://media.base44.com/images/public/6a6c994a5052168c0a1481ca/ec364c5a3_generated_465d06c5.png";
+const HERO_IMG = "/space-1.jpg";
 
 export default function Hero() {
   return (
@@ -52,9 +51,9 @@ export default function Hero() {
                   10
                 </span>
                 <span className="text-xs leading-relaxed text-[hsl(30,12%,38%)] tracking-wider">
-                  年專業
+                  10 年以上
                   <br />
-                  經驗
+                  專業經驗
                 </span>
               </div>
               <div className="h-8 w-px bg-[hsl(36,25%,86%)] hidden sm:block" />
@@ -63,6 +62,9 @@ export default function Hero() {
                   透明定價
                 </p>
                 <p className="mt-0.5">據點 2,000 · 到府 2,500 元 / 60 分鐘</p>
+                <p className="mt-0.5">
+                  顏郁璋 · 莊曜庭 · 何昇勳 · 邱瑋鈞，皆具 10 年以上專業經驗
+                </p>
               </div>
             </div>
           </div>
@@ -72,7 +74,7 @@ export default function Hero() {
               <div className="aspect-[3/4] sm:aspect-[4/5] w-full overflow-hidden rounded-sm bg-[hsl(36,31%,91%)]">
                 <Image
                   src={HERO_IMG}
-                  alt="心見 MIND-AWARE 台北顱薦椎工作室｜靜謐的放鬆空間，提供顱薦椎工作與內臟筋膜放鬆"
+                  alt="心見 MIND-AWARE 大安工作室實景｜靜謐的放鬆空間，提供顱薦椎工作與內臟筋膜放鬆"
                   width={600}
                   height={750}
                   priority
