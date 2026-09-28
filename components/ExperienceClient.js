@@ -2,7 +2,14 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
-import { MessageCircle, Ear, Hand, Moon, MessageSquare, ArrowRight } from "lucide-react";
+import {
+  MessageCircle,
+  Ear,
+  Hand,
+  Moon,
+  MessageSquare,
+  ArrowRight,
+} from "lucide-react";
 
 const LINE_URL = "https://lin.ee/rqKVgA4";
 
@@ -34,8 +41,7 @@ const STEPS = [
     icon: Hand,
     description:
       "平躺、穿著衣物、閉上眼睛。工作者以約 5 克的力道輕觸你的頭顱、脊椎與薦骨，感知顱薦律動，陪伴筋膜慢慢鬆開。",
-    detail:
-      "你可能感覺到溫熱、微微的流動感，或直接睡著——都是正常的。",
+    detail: "你可能感覺到溫熱、微微的流動感，或直接睡著——都是正常的。",
     extra: "＊ 全程穿著衣物，不使用精油，不需脫衣。",
   },
   {
@@ -44,7 +50,7 @@ const STEPS = [
     title: "讓身體慢慢回來",
     icon: Moon,
     description:
-      "工作結束後，我們不會立刻請你起身。靜置幾分鐘，讓神經系統慢慢從深度放鬆的狀態回到日常節奏。",
+      "工作結束後，我們不會立刻請你起身。靜置幾分鐘，讓身體從放鬆的狀態慢慢回到日常節奏。",
     detail: "這段靜置，往往是整個體驗中最珍貴的部分。",
     extra: null,
   },
@@ -72,7 +78,9 @@ export default function ExperienceClient() {
   const prefersReduced = useRef(false);
 
   useEffect(() => {
-    prefersReduced.current = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    prefersReduced.current = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
   }, []);
 
   const goTo = useCallback((idx) => {
@@ -128,18 +136,40 @@ export default function ExperienceClient() {
       }}
     >
       {/* ── Page Header ──────────────────────────────── */}
-      <section style={{ paddingTop: "140px", paddingBottom: "64px" }} className="px-6 lg:px-10 max-w-5xl mx-auto">
-
+      <section
+        style={{ paddingTop: "140px", paddingBottom: "64px" }}
+        className="px-6 lg:px-10 max-w-5xl mx-auto"
+      >
         {/* Breadcrumb */}
         <nav className="mb-10" aria-label="breadcrumb">
-          <ol className="flex items-center gap-2 text-xs" style={{ color: "#8B6A50" }}>
-            <li><Link href="/" style={{ color: "#8B6A50" }} className="hover:opacity-70 transition-opacity">心見 MIND-AWARE</Link></li>
+          <ol
+            className="flex items-center gap-2 text-xs"
+            style={{ color: "#8B6A50" }}
+          >
+            <li>
+              <Link
+                href="/"
+                style={{ color: "#8B6A50" }}
+                className="hover:opacity-70 transition-opacity"
+              >
+                心見 MIND-AWARE
+              </Link>
+            </li>
             <li>/</li>
             <li style={{ color: "#2C2820" }}>體驗流程</li>
           </ol>
         </nav>
 
-        <p style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", color: "#8B6A50", letterSpacing: "0.3em", fontSize: "12px", marginBottom: "20px" }}>
+        <p
+          style={{
+            fontFamily: "'Cormorant Garamond', serif",
+            fontStyle: "italic",
+            color: "#8B6A50",
+            letterSpacing: "0.3em",
+            fontSize: "12px",
+            marginBottom: "20px",
+          }}
+        >
           01 · Experience
         </p>
 
@@ -154,7 +184,13 @@ export default function ExperienceClient() {
         >
           台北顱薦椎體驗流程
           <br />
-          <span style={{ fontWeight: 200, opacity: 0.7, fontSize: "clamp(1.25rem, 3vw, 1.875rem)" }}>
+          <span
+            style={{
+              fontWeight: 200,
+              opacity: 0.7,
+              fontSize: "clamp(1.25rem, 3vw, 1.875rem)",
+            }}
+          >
             心見 MIND-AWARE 預約到完成全指南
           </span>
         </h1>
@@ -171,7 +207,8 @@ export default function ExperienceClient() {
           }}
         >
           從第一次 LINE 諮詢到工作結束後靜置，完整 5 個步驟。
-          <br />每一步都是陪伴，不是程序。
+          <br />
+          每一步都是陪伴，不是程序。
         </p>
 
         {/* Pricing pill */}
@@ -192,7 +229,13 @@ export default function ExperienceClient() {
           據點體驗 2,000 元・到府服務 2,500 元・60 分鐘・全程一對一
         </div>
 
-        <div style={{ height: "1px", backgroundColor: "#DDD5C8", marginTop: "48px" }} />
+        <div
+          style={{
+            height: "1px",
+            backgroundColor: "#DDD5C8",
+            marginTop: "48px",
+          }}
+        />
       </section>
 
       {/* ── Step Flow ────────────────────────────────── */}
@@ -212,28 +255,59 @@ export default function ExperienceClient() {
           aria-valuenow={Math.round(progress)}
           aria-valuemin={0}
           aria-valuemax={100}
-          style={{ height: "2px", backgroundColor: "#DDD5C8", marginBottom: "40px", borderRadius: "1px", overflow: "hidden" }}
+          style={{
+            height: "2px",
+            backgroundColor: "#DDD5C8",
+            marginBottom: "40px",
+            borderRadius: "1px",
+            overflow: "hidden",
+          }}
         >
           <div
             style={{
               height: "100%",
               backgroundColor: "#4E7A5E",
-              width: `${((active) / (STEPS.length - 1)) * 100 + (progress / (STEPS.length - 1))}%`,
+              width: `${(active / (STEPS.length - 1)) * 100 + progress / (STEPS.length - 1)}%`,
               transition: "width 0.1s linear",
             }}
           />
         </div>
 
         {/* Desktop stepper (hidden on mobile) */}
-        <div className="hidden lg:flex items-center gap-0 mb-12" style={{ position: "relative" }}>
+        <div
+          className="hidden lg:flex items-center gap-0 mb-12"
+          style={{ position: "relative" }}
+        >
           {STEPS.map((s, i) => {
             const isActive = i === active;
             const isDone = i < active;
             return (
-              <div key={i} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center" }}>
-                <div style={{ display: "flex", alignItems: "center", width: "100%" }}>
+              <div
+                key={i}
+                style={{
+                  flex: 1,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    width: "100%",
+                  }}
+                >
                   {i > 0 && (
-                    <div style={{ flex: 1, height: "1px", backgroundColor: isDone || isActive ? "#4E7A5E" : "#DDD5C8", transition: "background-color 0.3s" }} />
+                    <div
+                      style={{
+                        flex: 1,
+                        height: "1px",
+                        backgroundColor:
+                          isDone || isActive ? "#4E7A5E" : "#DDD5C8",
+                        transition: "background-color 0.3s",
+                      }}
+                    />
                   )}
                   <button
                     onClick={() => handleManualSelect(i)}
@@ -243,8 +317,16 @@ export default function ExperienceClient() {
                       height: "36px",
                       borderRadius: "50%",
                       border: `1px solid ${isActive ? "#4E7A5E" : isDone ? "#4E7A5E" : "#DDD5C8"}`,
-                      backgroundColor: isActive ? "#4E7A5E" : isDone ? "#F9F7F2" : "#F7F3EE",
-                      color: isActive ? "white" : isDone ? "#4E7A5E" : "#8B6A50",
+                      backgroundColor: isActive
+                        ? "#4E7A5E"
+                        : isDone
+                          ? "#F9F7F2"
+                          : "#F7F3EE",
+                      color: isActive
+                        ? "white"
+                        : isDone
+                          ? "#4E7A5E"
+                          : "#8B6A50",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -259,7 +341,14 @@ export default function ExperienceClient() {
                     {s.number}
                   </button>
                   {i < STEPS.length - 1 && (
-                    <div style={{ flex: 1, height: "1px", backgroundColor: isDone ? "#4E7A5E" : "#DDD5C8", transition: "background-color 0.3s" }} />
+                    <div
+                      style={{
+                        flex: 1,
+                        height: "1px",
+                        backgroundColor: isDone ? "#4E7A5E" : "#DDD5C8",
+                        transition: "background-color 0.3s",
+                      }}
+                    />
                   )}
                 </div>
                 <button
@@ -303,8 +392,20 @@ export default function ExperienceClient() {
         >
           <meta itemProp="position" content={String(active + 1)} />
 
-          <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "8px" }}>
-            <Icon size={20} strokeWidth={1} color="#4E7A5E" aria-hidden="true" />
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "12px",
+              marginBottom: "8px",
+            }}
+          >
+            <Icon
+              size={20}
+              strokeWidth={1}
+              color="#4E7A5E"
+              aria-hidden="true"
+            />
             <p
               style={{
                 fontFamily: "'Cormorant Garamond', serif",
@@ -384,7 +485,15 @@ export default function ExperienceClient() {
           </blockquote>
 
           {step.extra && (
-            <p style={{ marginTop: "16px", fontSize: "12px", color: "#8B6A50", fontFamily: "'Noto Sans TC', sans-serif", fontWeight: 300 }}>
+            <p
+              style={{
+                marginTop: "16px",
+                fontSize: "12px",
+                color: "#8B6A50",
+                fontFamily: "'Noto Sans TC', sans-serif",
+                fontWeight: 300,
+              }}
+            >
               {step.extra}
             </p>
           )}
@@ -425,7 +534,9 @@ export default function ExperienceClient() {
               ))}
             </div>
             <button
-              onClick={() => active < STEPS.length - 1 && handleManualSelect(active + 1)}
+              onClick={() =>
+                active < STEPS.length - 1 && handleManualSelect(active + 1)
+              }
               disabled={active === STEPS.length - 1}
               style={{
                 fontFamily: "'Noto Sans TC', sans-serif",
@@ -485,11 +596,19 @@ export default function ExperienceClient() {
               marginBottom: "40px",
             }}
           >
-            不需要確定自己的狀況是否適合。
-            <br />帶著你的好奇心，讓身體告訴你答案。
+            不確定自己的狀況是否適合？
+            <br />
+            歡迎先透過 LINE 和我們聊聊。
           </p>
 
-          <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
+          <div
+            style={{
+              display: "flex",
+              gap: "16px",
+              justifyContent: "center",
+              flexWrap: "wrap",
+            }}
+          >
             <a
               href={LINE_URL}
               target="_blank"
@@ -509,8 +628,8 @@ export default function ExperienceClient() {
                 gap: "8px",
                 transition: "opacity 0.3s",
               }}
-              onMouseEnter={e => e.currentTarget.style.opacity = "0.85"}
-              onMouseLeave={e => e.currentTarget.style.opacity = "1"}
+              onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")}
+              onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
             >
               LINE 預約諮詢
               <ArrowRight size={14} strokeWidth={1} />
@@ -530,8 +649,14 @@ export default function ExperienceClient() {
                 fontWeight: 300,
                 transition: "all 0.3s",
               }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.6)"; e.currentTarget.style.color = "white"; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(221,213,200,0.4)"; e.currentTarget.style.color = "rgba(255,255,255,0.7)"; }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = "rgba(255,255,255,0.6)";
+                e.currentTarget.style.color = "white";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = "rgba(221,213,200,0.4)";
+                e.currentTarget.style.color = "rgba(255,255,255,0.7)";
+              }}
             >
               查看常見問題 FAQ
             </Link>
@@ -548,7 +673,8 @@ export default function ExperienceClient() {
             }}
           >
             ＊ 個別體驗感受因人而異，非任何形式之效果保證。
-            <br />心見 MIND-AWARE 提供之服務為身心放鬆之陪伴，非醫療行為。
+            <br />
+            心見 MIND-AWARE 提供之服務為身心放鬆之陪伴，非醫療行為。
           </p>
         </div>
       </section>
