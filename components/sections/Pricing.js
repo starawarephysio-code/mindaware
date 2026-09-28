@@ -1,11 +1,9 @@
-import Image from "next/image";
 import { MapPin, Home, Check, ArrowUpRight } from "lucide-react";
 import { PRICE_PLANS, COMPARISON_TABLE } from "@/lib/priceData";
 
 const LINE_URL = "https://lin.ee/rqKVgA4";
 const P = "hsl(138,23%,39%)";
 const A = "hsl(28,24%,44%)";
-const STUDIO_IMG = "/space-2.jpg";
 
 const HOME_PREP = [
   "提供約 2×2 公尺的平坦空地",
@@ -29,17 +27,7 @@ export default function Pricing() {
           選擇最適合你的方式，與身體相遇。全程一對一，固定 60 分鐘，自費服務。
         </p>
 
-        <div className="mt-12 mx-auto max-w-4xl aspect-[16/7] overflow-hidden rounded-sm bg-[hsl(36,31%,91%)]">
-          <Image
-            src={STUDIO_IMG}
-            alt="心見 MIND-AWARE 大安工作室實景｜台北市大安區和平東路，提供一對一顱薦椎與內臟筋膜放鬆工作"
-            width={896}
-            height={392}
-            loading="lazy"
-            sizes="(max-width: 896px) 100vw, 896px"
-            className="w-full h-full object-cover"
-          />
-        </div>
+        {/* 工作室照片待補拍後放回（2026-09-28） */}
 
         <div className="mt-16 grid md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl">
           {PRICE_PLANS.map((plan) => {

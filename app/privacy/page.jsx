@@ -17,7 +17,7 @@ const SECTIONS = [
   {
     no: "一",
     title: "蒐集者",
-    body: "心見空間｜到府（心見 MIND-AWARE）。",
+    body: "欣見健康管理顧問有限公司（統一編號 85012864），品牌名稱：心見 MIND-AWARE。",
   },
   {
     no: "二",

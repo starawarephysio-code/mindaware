@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 const LINE_URL = "https://lin.ee/rqKVgA4";
-const HERO_IMG = "/space-1.jpg";
+const HERO_IMG = "/space-3.jpg";
 
 export default function Hero() {
   return (
@@ -51,7 +51,7 @@ export default function Hero() {
                   10
                 </span>
                 <span className="text-xs leading-relaxed text-[hsl(30,12%,38%)] tracking-wider">
-                  10 年以上
+                  年以上
                   <br />
                   專業經驗
                 </span>
@@ -62,9 +62,6 @@ export default function Hero() {
                   透明定價
                 </p>
                 <p className="mt-0.5">據點 2,000 · 到府 2,500 元 / 60 分鐘</p>
-                <p className="mt-0.5">
-                  顏郁璋 · 莊曜庭 · 何昇勳 · 邱瑋鈞，皆具 10 年以上專業經驗
-                </p>
               </div>
             </div>
           </div>
